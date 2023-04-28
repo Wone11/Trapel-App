@@ -1,10 +1,14 @@
-import React from 'react';
-import {Autocomplete, autocomplete} from '@react-google-maps/api'
+import React                                         from 'react';
+import {Autocomplete}                                from '@react-google-maps/api'
 
-import { AppBar,Toolbar, Typography,InputBase,Box } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search'
+import { AppBar,Toolbar, Typography,InputBase,Box }  from '@material-ui/core';
+import SearchIcon                                    from '@material-ui/icons/Search'
+
+
+import Styles                                        from './Styles';
 
 const Header = () => {
+  const classes = Styles();
   return (
     <>
           <AppBar position="static">
@@ -13,7 +17,7 @@ const Header = () => {
                       Drug Store Finder
                   </Typography>
                   <Box display="flex">
-                      <Typography variant="h6" className={classes.details}>
+                      <Typography variant="h6" className={classes.title}>
                          Explore New Place
                       </Typography>
                       <Autocomplete>
@@ -21,7 +25,7 @@ const Header = () => {
                             <div className={classes.searchIcon}>
                                 <SearchIcon/>
                             </div>
-                            <InputBase placeholder="Search..." className={{root:classes.inputRoot,input:classes.classes.inputInput}}/>
+                            <InputBase placeholder="Search..." className={{root:classes.inputRoot,input:classes.inputInput}}/>
                         </div>
                       </Autocomplete>
                   </Box>

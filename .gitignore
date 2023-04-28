@@ -20,3 +20,8 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#package.json
+package.json
+
+#modules folder
+node_modules/
