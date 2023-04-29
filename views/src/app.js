@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { CssBaseline, Grid } from '@material-ui/core';
+import React, { useState, useEffect }       from 'react';
+import { CssBaseline, Grid }                from '@material-ui/core';
 
-import { getPlacesData, getWeatherData } from './api/travelAdvisorAPI';
-import Header from './Components/Header/Header';
-import List from './components/List/List';
-import Map from './components/Map/Map';
+import { getPlacesData, getWeatherData }    from './api/travelAdvisorAPI';
+import Header                               from './Components/Header/Header';
+import List                                 from './Components/List/List';
+import Map                                  from './Components/Maps/Maps';
+
 
 const App = () => {
   const [type, setType] = useState('restaurants');
